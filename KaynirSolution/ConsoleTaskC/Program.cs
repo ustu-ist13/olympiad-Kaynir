@@ -22,9 +22,9 @@ namespace ConsoleTaskC
             {
                 massList.Add(new int[] { mass[j], mass[j + 1], mass[j + 2] });
             }
-            var powers = massList.Select(x => new { sum = x.Sum(), index = massList.IndexOf(x) });
+            var powers = massList.Select(x => new { sum = x.Sum(), index = massList.IndexOf(x) + 2 });
             var maxPower = powers.FirstOrDefault(x => x.sum == powers.Select(y => y.sum).Max());
-            Console.Write($"{maxPower.sum} {maxPower.index + 2}");
+            Console.Write($"{maxPower.sum} {maxPower.index}");
             Console.ReadKey();
         }
     }
