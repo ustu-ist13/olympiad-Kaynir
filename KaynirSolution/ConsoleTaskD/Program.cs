@@ -14,7 +14,7 @@ namespace ConsoleTaskD
                 string type = test[3];
                 int gun = int.Parse(test[6]);
                 int cav = int.Parse(test[10]);
-                int min = min = (gun <= cav) ? cav - gun + 1 : 0;
+                int min = (gun <= cav) ? cav - gun + 1 : 0;
                 int max = 0;
                 if (type == "home") max = (gun <= cav) ? 30 - gun : 29 - gun;
                 else max = (gun >= cav) ? 30 - gun : 29 - gun;
